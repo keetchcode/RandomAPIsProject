@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKy-Yl-n0e">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nobel-->
+        <scene sceneID="Etz-9L-HBN">
+            <objects>
+                <viewController id="GbO-fc-GPF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OZy-nr-zZm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vkc-kb-wiO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Nobel" image="trophy.fill" catalog="system" id="leJ-hn-np4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8F-4O-dnB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1563" y="622"/>
+        </scene>
+        <!--Dogs-->
+        <scene sceneID="MOf-vY-fr9">
+            <objects>
+                <viewController id="2UM-K9-M7c" customClass="DogViewController" customModule="RandomAPIsProject" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sg8-Cq-34s">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XGA-u3-xIL">
+                                <rect key="frame" x="25" y="179" width="343" height="470"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w30-Ep-Oqc">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="223"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bss-w3-woh">
+                                        <rect key="frame" x="134" y="435.66666666666663" width="75" height="34.333333333333314"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Doggo"/>
+                                        <connections>
+                                            <action selector="loadButtonTapped:" destination="2UM-K9-M7c" eventType="touchUpInside" id="1gb-Cl-jLb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QUR-8U-bY0">
+                                <rect key="frame" x="186" y="416" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q8g-ig-Ofv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XGA-u3-xIL" firstAttribute="leading" secondItem="Sg8-Cq-34s" secondAttribute="leading" constant="25" id="Tku-kf-tU5"/>
+                            <constraint firstItem="XGA-u3-xIL" firstAttribute="top" secondItem="Q8g-ig-Ofv" secondAttribute="top" constant="120" id="U6c-vX-r1a"/>
+                            <constraint firstItem="Q8g-ig-Ofv" firstAttribute="trailing" secondItem="XGA-u3-xIL" secondAttribute="trailing" constant="25" id="Whq-qm-8h0"/>
+                            <constraint firstItem="Q8g-ig-Ofv" firstAttribute="bottom" secondItem="XGA-u3-xIL" secondAttribute="bottom" constant="120" id="ggZ-I8-DQh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dogs" image="dog.fill" catalog="system" id="5wG-e7-obn"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="QUR-8U-bY0" id="qhX-51-8UT"/>
+                        <outlet property="imageView" destination="w30-Ep-Oqc" id="jds-IO-O9W"/>
+                        <outlet property="loadButton" destination="Bss-w3-woh" id="jN7-NV-1td"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYT-eV-w3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562.5954198473282" y="-927.46478873239437"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DMx-oO-HqN">
+            <objects>
+                <tabBarController id="PKy-Yl-n0e" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T49-Yz-qyG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2UM-K9-M7c" kind="relationship" relationship="viewControllers" id="5Vh-lT-EgK"/>
+                        <segue destination="GbO-fc-GPF" kind="relationship" relationship="viewControllers" id="YHW-Rf-LCS"/>
+                        <segue destination="iwL-sx-3Fy" kind="relationship" relationship="viewControllers" id="qXt-Wa-84S"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BC7-gl-UOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="-150"/>
+        </scene>
+        <!--Reps-->
+        <scene sceneID="JBW-WZ-8S0">
+            <objects>
+                <viewController id="iwL-sx-3Fy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mlq-3j-cxt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hlm-D9-S4q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reps" image="person.fill" catalog="system" id="74Z-4i-KrM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1E-mC-Nt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="-150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog.fill" catalog="system" width="128" height="100"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="trophy.fill" catalog="system" width="128" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
